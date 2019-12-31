@@ -71,7 +71,7 @@ export default {
      */
     extend(config, ctx) {},
     publicPath: '/public/', // _nuxt から public に変更 パフォーマンスの最大化のため dist ディレクトリ内のファイルを CDN にアップロード
-    vendor: ['axios'], // デフォルトでは各ページごとにライブラリが取り込まれてしまいます。ページごとではなく共通のJSファイルに取り込まれます
+    vendor: ['axios', 'babel-polyfill'], // デフォルトでは各ページごとにライブラリが取り込まれてしまいます。ページごとではなく共通のJSファイルに取り込まれます
     extractCSS: true //  CSSをJSから分離。 個々のファイルサイズを小さく保つことはブラウザのキャッシュに留まりやすくする CSSがファイルに分けられてHTMLが見やすくなる
   }
 }
